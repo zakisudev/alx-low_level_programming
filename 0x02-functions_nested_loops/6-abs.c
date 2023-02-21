@@ -19,7 +19,7 @@ int _abs(int r)
 	}
 	else
 	{
-	return ('0');
+	return (r);
 	}
 	return (0);
 }
