@@ -2,7 +2,9 @@
 #include <ctype.h>
 
 /**
- * _print_sign - print sign of a number
+ * print_sign - print sign of a number
+ *
+ *@n checked character
  *
  * Return: 1 if n is positive 0 if n is zero -1 if n is negative
  */
