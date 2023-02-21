@@ -4,6 +4,8 @@
 /**
  *_abs - check absolte value of integer
  *
+ * @r: number to be checked
+ *
  * Return: Always 0
  */
 
