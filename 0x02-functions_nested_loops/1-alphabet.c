@@ -1,19 +1,18 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - Alphabets
  *
- * Return: Always 0.
+ * Return: void
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char c = 'a';
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
-	_putchar(c);
+		_putchar(c);
 	}
 	_putchar('\n');
-	return (0);
 }
