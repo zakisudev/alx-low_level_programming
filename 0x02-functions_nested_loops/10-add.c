@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 /**
- *add - add two numbers
+ * add - add two numbers
  *
- *@a: first number
- @b: second number
-
+ * @a: first number
+ *
+ * @b: second number
+ *
  * Return: sum of two numbers
  */
 
