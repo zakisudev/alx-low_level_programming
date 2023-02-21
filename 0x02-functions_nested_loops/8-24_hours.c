@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- *print_last_digit - Print last digit
+ *jack_bauer - Print 24 hour in minutes
  *
  * Return: void
  */
