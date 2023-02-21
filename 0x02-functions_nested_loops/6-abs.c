@@ -11,15 +11,15 @@ int _abs(int r)
 {
 	if (abs(r) > 0)
 	{
-		_putchar(r);
+	return (r);
 	}
 	else if (abs(r) < 0)
 	{
-		_putchar(r * -1);
+	return (r * -1);
 	}
 	else
 	{
-		_putchar('0');
+	return ('0');
 	}
 	return (0);
 }
