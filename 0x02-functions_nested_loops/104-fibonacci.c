@@ -13,16 +13,15 @@ int main()
     int i;
         unsigned long first = 1, second = 2, next;
 
-	    printf("%lu %lu ", first, second); // print the first two Fibonacci numbers
+	    printf("%lu %lu ", first, second);
 
 	        for (i = 2; i < 98; i++) {
-		        next = first + second; // calculate the next Fibonacci number
+		        next = first + second;
 			        printf("%lu ", next);
-				        first = second; // update the previous two Fibonacci numbers
+				        first = second;
 					        second = next;
 						    }
 
-						        printf("\n"); // print a new line at the end
+						        printf("\n");
 		   return 0;
 }
-
