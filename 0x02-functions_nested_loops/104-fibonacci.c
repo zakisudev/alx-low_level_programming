@@ -13,7 +13,7 @@ int main()
     int i;
         unsigned long first = 1, second = 2, next;
 
-	    printf("%lu %lu ", first, second);
+	    printf("%lu, %lu, ", first, second);
 
 	        for (i = 2; i < 98; i++) {
 		        next = first + second;
