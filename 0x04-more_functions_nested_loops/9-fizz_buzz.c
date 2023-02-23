@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_diagonal - print diagonals
+ * main - print fizzbuzz
  * Return: Always 0
  */
 
-int main()
+int main(void)
 {
 	int x;
 
