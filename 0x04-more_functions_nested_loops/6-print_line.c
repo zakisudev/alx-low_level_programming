@@ -1,22 +1,24 @@
 #include "main.h"
+
 /**
- * print_line - Print line
+ * print_line - Prints lines
  *
  * Return: void
  */
 
 void print_line(int n)
 {
-	while (n > 0)
+	int x;
+
+	if (n <= 0)
 	{
-		if (n < 0)
+		_putchar('\n');
+	}
+	else
+	{
+		for (x = 0; x < n; x++)
 		{
-			_putchar('\n');
-		}
-		else
-		{
-		_putchar('_');
-		n--;
+			_putchar(95);
 		}
 	}
 	_putchar('\n');
