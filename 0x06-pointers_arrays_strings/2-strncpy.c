@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _strcpy - Copy a string an inputted number of bytes
+ * _strncpy - Copy a string an inputted number of bytes
  * @dest: store for string copy
  * @src: source of the string
+ * @n: number of times
  * Return: Pointer to the resulting string dest
  */
 
