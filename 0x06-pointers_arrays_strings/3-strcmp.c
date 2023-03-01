@@ -9,9 +9,9 @@
  * If s1 > s2, the positive difference
  */
 
-char *_strncmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
-	while(*s && *s2 && *s1 == *s2)
+	while(*s1 && *s2 && *s1 == *s2)
 	{
 		s1++;
 		s2++;
