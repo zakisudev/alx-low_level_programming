@@ -4,10 +4,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r);
 char *add_strings(char *n1, char *n2, char *r, int r_index);
 
 /**
- * add_strings - adds the numbers sroted in two strings
+ * add_strings - adds the numbers sorted in two strings
  * @n1: the string contaning the first number to be added
  * @n2: the buffer to store the result
  * @r_index: the current index of the buffer
+ * @r: result of the buffer
  * Return: the current index of the buffer
  */
 
@@ -42,6 +43,15 @@ char *add_strings(char *n1, char *n2, char *r, int r_index)
 		return (0);
 	return (r + r_index + 1);
 }
+
+/**
+ * infinite_add - adds two numbers
+ * @n1: the string contaning the first number to be added
+ * @n2: the buffer to store the result
+ * @size_r: the current index of the buffer
+ * @r: result of the buffer
+ * Return: the current index of the buffer
+*/
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
