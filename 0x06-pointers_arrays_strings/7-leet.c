@@ -2,7 +2,7 @@
 
 /**
  * *leet - encodes a string to 1337 of a string
- * @src: THe string to be capitalized
+ * @str: THe string to be capitalized
  * Return: pointer to the changed string
  */
 
@@ -10,7 +10,7 @@ char *leet(char *str)
 {
 	int index1 = 0, index2;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
-	
+
 	while (str[index1])
 	{
 		for (index2 = 0; index2 <= 7; index2++)
