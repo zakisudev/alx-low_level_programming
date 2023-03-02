@@ -1,49 +1,47 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdio.h>
 
 /**
- * print_buffer - prints buffer
- * @b: buffer
- * @size: size
+ * print_buffer - prints a buffer
+ *
+ * @b: char pointer
+ *
+ * @size: int
+ *
  * Return: void
  */
 
 void print_buffer(char *b, int size)
 {
-	int o, j, i;
 
-	o = 0;
-	if (size <= 0)
-	{
-		printf("\n");
-		return;
-	}
-	while (o < size)
-	{
-		j = size - o < 10 ? size - o : 10;
-		printf("%08X: ", o);
-		for (i = 0; i < 10; i++)
-		{
-			if (i < j)
-				printf("%02X", *(b + o + i));
-			else
-				printf("  ");
-			if (i % 2)
-			{
-				printf(" ");
-			}
-		}
-		for (i = 0; i < j; i++)
-		{
-			int c = *(b + o + i);
+int i, j;
 
-			if (c < 32 || c > 132)
-			{
-				c = '.';
-			}
-			printf("%c", c);
-		}
-		printf("\n");
-		o += 10;
-	}
+i = 0;
+while (i < size)
+{
+printf("%08x: ", i);
+for (j = i; j < i + 10; j++)
+{
+if (j < size)
+printf("%02x", (unsigned char)b[j]);
+else
+printf("  ");
+if (j % 2)
+putchar(' ');
+}
+for (j = i; j < i + 10; j++)
+{
+if (j >= size)
+break;
+
+if (b[j] >= ' ' && *(b + j) <= '~')
+putchar(*(b + j));
+else
+putchar('.');
+}
+i += 10;
+if (i < size)
+putchar('\n');
+}
+putchar('\n');
 }
