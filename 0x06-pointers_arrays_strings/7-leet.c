@@ -1,24 +1,26 @@
 #include "main.h"
 
 /**
- * *leet - encodes a string to 1337 of a string
- * @str: THe string to be capitalized
- * Return: pointer to the changed string
+ * leet - Encodes a string in leet
+ * @str: String to be encoded
+ * Return: Always 0.
  */
 
 char *leet(char *str)
 {
-	int index1 = 0, index2;
-	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	int i = 0, k;
+	char s[] = "aAeEoOtTlL";
+	char s1[] = "4433007711";
 
-	while (str[index1])
+	for (; str[i] != '\0'; i++)
 	{
-		for (index2 = 0; index2 <= 7; index2++)
+		for (k = 0; k <= 9; k++)
 		{
-		if (str[index1] == leet[index2] || str[index1] - 32 == leet[index2])
-			str[index1] = index2 + '0';
+			if (s[k] == str[i])
+			{
+				str[i] = s1[k];
+			}
 		}
-		index1++;
 	}
 	return (str);
 }
