@@ -16,7 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 	for (s_index = 0; s[s_index] != '\0'; s_index++)
 	{
 		count_before = count;
-		for (accept_index = 0; accept[accept_index] != '\0'; accpet_index++)
+		for (accept_index = 0; accept[accept_index] != '\0'; accept_index++)
 		{
 		if (s[s_index] == accept[accept_index])
 			count++;
