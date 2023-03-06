@@ -16,9 +16,14 @@ char *_strpbrk(char *s, char *accept)
 
 	for (s_index = 0; s[s_index] != '\0'; s_index++)
 	{
-		if (s[s_index] == accept[accept_index])
-			ch = &accept[accept_index];
-			return (ch);
+		for (accept_index = 0; accept[accept_index] !='\0'; accept_index++)
+		{
+			if (s[s_index] == accept[accept_index])
+			{
+				ch = &accept[accept_index];
+				return (ch);
+			}
+		}
 	}
 	return (NULL);
 }
