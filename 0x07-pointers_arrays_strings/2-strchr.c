@@ -21,11 +21,11 @@ char *_strchr(char *s, char c)
 			fop = &s[index];
 			return (fop);
 		}
-		if (c == '\0')
+	}
+	if (c == '\0')
 		{
 			fop = &s[index];
 			return (fop);
 		}
-	}
 	return (NULL);
 }
