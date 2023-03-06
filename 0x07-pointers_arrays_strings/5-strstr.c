@@ -11,19 +11,27 @@
 char *_strstr(char *haystack, char *needle)
 {
 
-	unsigned int index;
-	char *ptr;
+	int n = 0, m = 0, len_needle = 0;
 
-	for (index = 0; haystack[index] != '\0'; index++)
+	len_needle = _strlen(needle) - 1;
+	if (_strlen(needle) == 0)
 	{
-		for (index = 0; needle[index] != '\0'; index++)
+		return (haystack);
+	}
+	for (n = 0; *(haystack + n) != '\0'; n++)
+	{
+		for (m = 0; *(needle + m) != '\0'; m++)
 		{
-			if (haystack[index] == needle[index])
+			while (*(hastack + n) == *(needle + m))
 			{
-				ptr = &haystack[index];
-				return (prt);
+				n++;
+				m++
+				if ((m == len_needle) && *(haystack + n) == (needle + len_neelde))
+					{
+					return (haystack + (n - len_needle));
+					}
 			}
 		}
 	}
-	return (NULL);
+	return ('\0');
 }
