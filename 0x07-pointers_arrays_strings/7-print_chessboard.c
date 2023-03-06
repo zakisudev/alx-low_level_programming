@@ -4,7 +4,7 @@
 int _strlen(char *s);
 /**
  * print_chessboard - Prints a chessboard
- * 
+ * @a: chessboard
  * Return: void
  */
 void print_chessboard(char (*a)[8])
