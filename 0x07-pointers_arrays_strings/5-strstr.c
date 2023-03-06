@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
+int _strlen(char *s);
 /**
  * _strstr - Locates a substring
  * @haystack: the string to be checked
@@ -22,11 +23,11 @@ char *_strstr(char *haystack, char *needle)
 	{
 		for (m = 0; *(needle + m) != '\0'; m++)
 		{
-			while (*(hastack + n) == *(needle + m))
+			while (*(haystack + n) == *(needle + m))
 			{
 				n++;
-				m++
-				if ((m == len_needle) && *(haystack + n) == (needle + len_neelde))
+				m++;
+				if ((m == len_needle) && *(haystack + n) == *(needle + len_needle))
 					{
 					return (haystack + (n - len_needle));
 					}
