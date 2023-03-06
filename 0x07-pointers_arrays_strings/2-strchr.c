@@ -12,16 +12,20 @@ char *_strchr(char *s, char c)
 {
 
 	int index;
+	char *fop;
 
-	for (index = 0; index < s; index++)
+	for (index = 0; s[index] != '\0'; index++)
 	{
 		if (s[index] == c)
 		{
-			return (s[index]);
+			fop = &s[index];
+			return (fop);
 		}
-		else
+		if (c == '\0')
 		{
-			return (NULL);
+			fop = &s[index];
+			return (fop);
 		}
 	}
+	return (NULL);
 }
