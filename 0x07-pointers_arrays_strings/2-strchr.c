@@ -23,9 +23,9 @@ char *_strchr(char *s, char c)
 		}
 	}
 	if (c == '\0')
-		{
-			fop = &s[index];
-			return (fop);
-		}
+	{
+		fop = &s[index];
+		return (fop);
+	}
 	return (NULL);
 }
