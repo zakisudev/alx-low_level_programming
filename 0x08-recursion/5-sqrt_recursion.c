@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _sqrt(int n, int sqrt);
 /**
  * _sqrt_recursion - print squareroot of a n
  * @n: the number to be squarerooted
