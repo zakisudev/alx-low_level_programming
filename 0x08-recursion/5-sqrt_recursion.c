@@ -27,3 +27,4 @@ int _sqrt(int n, int sqrt)
 	if (sqrt * sqrt == n)
 		return (sqrt);
 	return (_sqrt(n, sqrt + 1));
+}
