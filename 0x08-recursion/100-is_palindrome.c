@@ -38,3 +38,20 @@ int check_chars(char *s, int in_start, int in_end)
 	else
 		return (0);
 }
+
+/**
+ * _strlen_recursion - Calculare the string length recursively
+ * @s: string to be checked
+ *
+ * Return: length of the string
+ */
+
+int _strlen_recursion(char *s)
+{
+	int len;
+
+	if (*s == '\0')
+		return (0);
+	len = 1 + _strlen_recursion(s + 1);
+	return (len);
+}
