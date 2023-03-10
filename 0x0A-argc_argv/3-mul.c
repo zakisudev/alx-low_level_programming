@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <string.h>
+#include <strlib.h>
+
 /**
  * main - Prints the of two arguments passed to it
  * @argc: counts of arguements on command line
