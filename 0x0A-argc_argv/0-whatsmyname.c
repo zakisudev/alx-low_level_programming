@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
  * main - Prints the name of the program
  * @argc: counts of arguements on command line
