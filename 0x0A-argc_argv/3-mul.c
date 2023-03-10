@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		{
 			printf("Error");
 		}
-		prod *= argv[i];
+		prod *= atoi(rgv[i]);
 		printf("%s\n", prod);
 	}
 	return (0);
