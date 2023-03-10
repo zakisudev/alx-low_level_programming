@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <strlib.h>
+#include <stdlib.h>
 
 /**
  * main - Prints the of two arguments passed to it
