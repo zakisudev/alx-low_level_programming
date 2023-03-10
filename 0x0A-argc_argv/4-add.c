@@ -16,27 +16,27 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-	printf("0\n");
-	return (0);
+		printf("0\n");
+		return (0);
 	}
 	for (index = 1; index < argc; index++)
 	{
-	if (atoi(argv[index]) < 0)
-	{
-	printf("Error\n");
-	return (1);
-	}
-	if (strlen(argv[index]) != digit_count(atoi(argv[index])))
-	{
-	printf("Error\n");
-	return (1);
-	}
-	if ((atoi(argv[index]) == 0) && (strcmp(argv[index], "0") != 0))
-	{
+		if (atoi(argv[index]) < 0)
+		{
 		printf("Error\n");
 		return (1);
-	}
-	sum += atoi(argv[index]);
+		}
+		if (strlen(argv[index]) != digit_count(atoi(argv[index])))
+		{
+			printf("Error\n");
+		return (1);
+		}
+		if ((atoi(argv[index]) == 0) && (strcmp(argv[index], "0") != 0))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		sum += atoi(argv[index]);
 	}
 	printf("%d\n", sum);
 	return (0);
@@ -53,8 +53,8 @@ unsigned long digit_count(int num)
 
 	if (num == 0)
 		return (1);
-	or (; num > 0; num /= 10)
-	count++;
+	for (; num > 0; num /= 10)
+		count++;
 
 	return (count);
 }
