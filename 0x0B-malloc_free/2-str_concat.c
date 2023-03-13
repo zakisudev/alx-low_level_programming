@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "main.h"
 
+unsigned int _strlen(char *str);
+
 /**
  * str_concat - concatenate two strings
  * @s1: the first string
