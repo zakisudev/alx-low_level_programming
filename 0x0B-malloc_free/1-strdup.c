@@ -16,13 +16,13 @@ char *_strdup(char *str)
 	unsigned int i, n;
 	char *ptr;
 
-	if (str == '\0')
+	if (str == NULL)
                 return (NULL);
 	n = _strlen(str);
 
 	ptr = malloc(sizeof(char) * (n + 1));
 
-	if (str == '\0')
+	if (str == NULL)
 		return (NULL);
 	for (i = 0; i != '\0'; i++)
 	{
