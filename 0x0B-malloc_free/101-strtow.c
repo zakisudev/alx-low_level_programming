@@ -64,7 +64,7 @@ char **strtow(char *str)
 				while (start < end)
 					*tmp++ = str[start++];
 				*tmp = '\0';
-				boc[k] = tmp - c;
+				box[k] = tmp - c;
 				k++;
 				c = 0;
 			}
