@@ -7,7 +7,7 @@
  * alloc_grid - creates a memory space for a 2D array and intializes to 0
  * @width: the width of the array
  * @height: the height of the array
- * 
+ *
  * Return: pointer to the 2D array, or NULL if failure, or width or height <= 0
  */
 
@@ -20,7 +20,7 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	
+
 	ptr = malloc(sizeof(int *) * height);
 	if (ptr == NULL)
 	{
