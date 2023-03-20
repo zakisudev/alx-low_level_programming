@@ -16,70 +16,78 @@ char *_strcpy(char *dest, char *src);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
+	dog_t *max_dog;
+	int name_l = 0, own_l = 0;
 
-	if (name == NULL || owner == NULL || age < 0)
-		return (NULL);
-
-	dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
-		return (NULL);
-
-	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (dog->name == NULL)
+	if (name != NULL && owner != NULL)
 	{
-		free(dog);
-		return (NULL);
+		name_l = _strlen(name) + 1;
+		own_l = _strlen(owner) + 1;
+		max_dog = malloc(sizeof(dog_t));
+
+		if (max_dog == NULL)
+			return (NULL);
+
+		max_dog->name = malloc(sizeof(char) * name_l);
+
+		if (max_dog->name == NULL)
+		{
+			free(max_dog);
+			return (NULL);
+		}
+
+		max_dog->owner = malloc(sizeof(char) * own_l);
+
+		if (max_dog->owner == NULL)
+		{
+			free(max_dog->name);
+			free(max_dog);
+			return (NULL);
+		}
+
+		max_dog->name = _strcpy(max_dog->name, name);
+		max_dog->owner = _strcpy(max_dog->owner, owner);
+		max_dog->age = age;
 	}
 
-	dog->owner = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (dog->owner == NULL)
-	{
-		free(dog);
-		free(dog->name);
-		return (NULL);
-	}
-
-	dog->name = name;
-	dog->age = age;
-	dog->owner = owner;
-
-	return (dog);
+	return (max_dog);
 }
 
 /**
- * _strlen - calculates the length of a string
- * @str: the string used in the calculation
- *
- * Return: the length of the string
- */
-int _strlen(char *str)
+  * _strlen - Returns the length of a string
+  * @s: String to count
+  *
+  * Return: String length
+  */
+int _strlen(char *s)
+{
+	int c = 0;
+
+	for (; *s != '\0'; s++)
+	{
+		c++;
+	}
+
+	return (c);
+}
+
+/**
+  * _strcpy - Copy a string
+  * @dest: Destination value
+  * @src: Source value
+  *
+  * Return: the pointer to dest
+  */
+char *_strcpy(char *dest, char *src)
 {
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
-		;
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
 
-	return (i);
-}
-
-/**
- * _strcpy - copies a string
- *
- * Description: copies string pointed to by src, including null terminator,
- * to the buffer pointed to by dest
- * @src: pointer pointing to original string
- * @dest: pointer that copies string onto buffer
- *
- * Return: the copied string
- */
-char *_strcpy(char *dest, char *src)
-{
-	int index;
-
-	for (index = 0; *(src + index) != '\0'; index++)
-		*(dest + index) = *(src + index);
-	*(dest + index) = '\0';
+	dest[i++] = '\0';
 
 	return (dest);
 }
