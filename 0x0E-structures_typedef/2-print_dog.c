@@ -17,7 +17,7 @@ void print_dog(struct dog *d)
 		return;
 	
 	if (d->name == NULL)
-		dogname = "Name: (nil)";
+		dogname = "(nil)";
 	else
 		dogname = d->name;
 	
