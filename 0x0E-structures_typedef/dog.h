@@ -13,3 +13,5 @@ typedef struct dog
 	float age;
 	char *ower;
 };
+
+#endif /* ifndef DOG_H */
