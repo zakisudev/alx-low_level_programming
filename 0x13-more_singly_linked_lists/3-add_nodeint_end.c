@@ -3,11 +3,11 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - add node in end of list
- * @head: pointer
- * @n: data of the node.
- * Return: head
- */
+* add_nodeint_end - add node in end of list
+* @head: pointer
+* @n: data of the node.
+* Return: head
+*/
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -28,8 +28,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	}
 	endnode = *head;
 
+
 	while (endnode->next != NULL)
 		endnode = endnode->next;
 		endnode->next = newnode;
+
 	return (newnode);
 }
