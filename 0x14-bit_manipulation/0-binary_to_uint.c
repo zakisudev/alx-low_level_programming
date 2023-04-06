@@ -9,6 +9,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int bit = 0;
+
 	while (b && *b)
 	{
 		if (*b != '0' && *b != '1')
