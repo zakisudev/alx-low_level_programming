@@ -2,7 +2,7 @@
 
 /**
  * dlistint_t_len - Return the length of a dlistint_t list
- * @h: struct
+ * @h: head for node
  * Return: the length of the list
  */
 size_t dlistint_t_len(const dlistint_t *h)
@@ -11,7 +11,7 @@ size_t dlistint_t_len(const dlistint_t *h)
 
 	while (h != NULL)
 	{
-		cout++;
+		count++;
 		h = h->next;
 	}
 	return (count);
@@ -31,17 +31,21 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (idx > dlistint_t_len(*h))
 		return (NULL);
+
 	new = malloc(sizeof(dlistint_t));
 
 	if (new == NULL)
 		return (NULL);
+	
 	new->prev = NULL;
 	new->n = n;
 	new->next = NULL;
 
 	curr = *h;
 	for (i = 0; i < (idx - 1); i++)
+	{
 		curr = curr->next;
+	}
 	new->prev = curr;
 	new->next = curr->next;
 	curr->next->prev = new;
