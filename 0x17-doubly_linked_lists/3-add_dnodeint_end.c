@@ -4,7 +4,7 @@
  * add_dnodeint_end - Add a new node at the end of a dlistin_t list
  * @head: struct
  * @n: new node
- * Return - Address of new element or NULL if it failed
+ * Return: Address of new element or NULL if it failed
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
