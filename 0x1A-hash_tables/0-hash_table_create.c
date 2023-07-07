@@ -14,15 +14,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (!new_ht)
 		return (NULL);
-
 	new_ht->size = size;
 	new_ht->array = malloc(sizeof(hash_table_t *) * size);
-
 	if (!new_ht->array)
 		return (NULL);
-
 	for (i = 0; i < size; i++)
 		new_ht->array[i] = NULL;
-
 	return (new_ht);
 }
